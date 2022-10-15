@@ -12,7 +12,7 @@ RUN make build
 
 FROM arm64v8/debian
 
-COPY --from=build /go/src/github.com/google/cadvisor/cadvisor /usr/bin/cadvisor
+COPY --from=build /go/src/github.com/google/cadvisor/_output/cadvisor /usr/bin/cadvisor
 
 EXPOSE 8080
 
